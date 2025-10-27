@@ -2,10 +2,10 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import HeroBanner from "../components/HeroBanner";
 import { Code, Palette, Rocket, Shield, Zap, Users } from "lucide-react";
-import { Card , CardContent} from "../components/UI/card";
+import { Card, CardContent } from "../components/UI/card";
 
 export default function Index() {
-    const features = [
+  const features = [
     {
       icon: Code,
       title: "Clean Code",
@@ -39,11 +39,11 @@ export default function Index() {
   ];
 
   const stats = [
-  { number: "50+", label: "โปรเจ็กต์ที่สำเร็จ" },
-  { number: "30+", label: "ลูกค้าพึงพอใจ" },
-  { number: "5+", label: "ปีประสบการณ์" },
-  { number: "100%", label: "ความมุ่งมั่น" },
-    ];
+    { number: "50+", label: "โปรเจ็กต์ที่สำเร็จ" },
+    { number: "30+", label: "ลูกค้าพึงพอใจ" },
+    { number: "5+", label: "ปีประสบการณ์" },
+    { number: "100%", label: "ความมุ่งมั่น" },
+  ];
   return (
     <div className="min-h-screen bg-blue-900">
       <NavBar />
@@ -66,7 +66,7 @@ export default function Index() {
           </div>
         </div>
       </section>
-      
+
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
