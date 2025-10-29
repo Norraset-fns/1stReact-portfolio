@@ -68,7 +68,7 @@ export default function Index() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20 bg-blue-950">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -83,7 +83,7 @@ export default function Index() {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:glow-primary"
+                className="bg-sky-950 hover:border-primary transition-all duration-300 hover:shadow-lg hover:glow-primary"
               >
                 <CardContent className="p-6 space-y-4">
                   <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
@@ -95,6 +95,7 @@ export default function Index() {
               </Card>
             ))}
           </div>
+          
         </div>
       </section>
     </div>
