@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import HeroBanner from "../components/HeroBanner";
 import { Code, Palette, Rocket, Shield, Zap, Users } from "lucide-react";
 import { Card, CardContent } from "../components/UI/card";
-
+import { Button } from "../components/UI/button";
 export default function Index() {
   const features = [
     {
@@ -45,12 +46,10 @@ export default function Index() {
     { number: "100%", label: "ความมุ่งมั่น" },
   ];
   return (
-    <div className="min-h-screen bg-blue-900">
-      <NavBar />
-
+    <div className="min-h-screen">
       <HeroBanner />
       {/* Stats Section */}
-      <section className="py-20 bg-blue-950">
+      <section className="py-20 bg-indigo-950">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -68,7 +67,7 @@ export default function Index() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-blue-950">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -83,7 +82,7 @@ export default function Index() {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="bg-sky-950 hover:border-primary transition-all duration-300 hover:shadow-lg hover:glow-primary"
+                className="border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:glow-primary "
               >
                 <CardContent className="p-6 space-y-4">
                   <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
@@ -96,6 +95,23 @@ export default function Index() {
             ))}
           </div>
           
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-primary">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            พร้อมเริ่มโปรเจ็กต์กับเราแล้วหรือยัง?
+          </h2>
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            ติดต่อเราวันนี้เพื่อปรึกษาและวางแผนโปรเจ็กต์ของคุณ
+          </p>
+          <Link to="/contact">
+            <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 ">
+              ติดต่อเราเลย
+            </Button>
+          </Link>
         </div>
       </section>
     </div>

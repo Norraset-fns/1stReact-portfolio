@@ -1,5 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Moon, Sun, Menu, X } from "lucide-react";
+import { Button } from "./UI/button";
 
 const navItems = [
   { id: 1, name: "หน้าหลัก", path: "/" },
@@ -8,6 +11,29 @@ const navItems = [
   { id: 4, name: "ติดต่อ", path: "/contact" },
 ];
 function NavBar() {
+  const [isDark, setIsDark] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const isDarkMode = localStorage.getItem("theme") === "dark";
+    setIsDark(isDarkMode);
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = !isDark;
+    setIsDark(newTheme);
+    if (newTheme) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  };
   return (
     <nav className="flex justify-between items-center px-8 py-4 bg-indigo-900/70 text-white sticky top-0 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-gray-900/50">
       <a href="#home" className="text-xl font-bold">
@@ -25,6 +51,20 @@ function NavBar() {
           ))}
         </ul>
       </div>
+       <div className="flex items-center space-x-4">
+        <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              className="rounded-full"
+            >
+              {isDark ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
+            </Button>
+       </div>
     </nav>
   );
 }
