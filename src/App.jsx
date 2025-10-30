@@ -14,12 +14,12 @@ function App() {
       <BrowserRouter>
         <div className="flex flex-col min-h-screen">
           <NavBar />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<h1>Services</h1>} />
-            <Route path="/contact" element={<h1>Contact</h1>} />
-          </Routes>
+          <main className="flex-1">
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </main>
         </div>
       </BrowserRouter>
     </>
