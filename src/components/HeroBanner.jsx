@@ -1,41 +1,47 @@
 import React from "react";
 import heroImg from "../assets/hero-bg.jpg";
+import { Link } from "react-router-dom";
+import { Button } from "./UI/button";
+
 function HeroBanner() {
   return (
     <section
-      className="relative bg-cover bg-center h-[80vh] flex items-center justify-center"
+      className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden"
       style={{
         backgroundImage: `url(${heroImg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-blue-900/80"></div>
+      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
 
       {/* Content */}
-      <div className="relative text-center z-10 px-4">
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-          สร้างเว็บไซต์ที่ยอดเยี่ยม
-        </h1>
-        <p className="text-gray-100 text-lg md:text-xl mb-6">
-          ทีม Web Freelance มืออาชีพที่พร้อมพัฒนาเว็บไซต์ตามความต้องการของคุณ
-          <br />
-          ด้วยประสบการณ์และเทคโนโลยีที่ทันสมัย
-        </p>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h1 className="text-5xl md:text-7xl font-bold">
+              <span className="text-gradient">เว็บไซต์ระดับมืออาชีพ</span>
+              <br />
+              <span className="text-foreground">สำหรับธุรกิจของคุณ</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+              ทีมนักพัฒนาเว็บมืออาชีพ พร้อมสร้างสรรค์โซลูชันดิจิทัลที่ตอบโจทย์ทุกความต้องการ
+            </p>
 
-        <div className="flex justify-center space-x-4">
-          <a
-            href="#portfolio"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition"
-          >
-            ดูผลงานของเรา →
-          </a>
-          <a
-            href="#contact"
-            className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition"
-          >
-            ติดต่อเรา
-          </a>
-        </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/">
+                <Button size="lg" variant="hero" className="text-lg px-8">
+                  ดูผลงาน
+                </Button>
+              </Link>
+              <Link to="/about">
+                <Button size="lg" variant="glass" className="text-lg px-8">
+                  ติดต่อเรา
+                </Button>
+              </Link>
+            </div>
+          </div>
       </div>
     </section>
   );

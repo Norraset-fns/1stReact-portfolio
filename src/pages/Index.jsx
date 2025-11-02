@@ -5,6 +5,7 @@ import HeroBanner from "../components/HeroBanner";
 import { Code, Palette, Rocket, Shield, Zap, Users } from "lucide-react";
 import { Card, CardContent } from "../components/UI/card";
 import { Button } from "../components/UI/button";
+import Footer from "../components/Footer";
 export default function Index() {
   const features = [
     {
@@ -49,15 +50,15 @@ export default function Index() {
     <div className="min-h-screen">
       <HeroBanner />
       {/* Stats Section */}
-      <section className="py-20 bg-indigo-950">
+      <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-transparent clip-text bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">
                   {stat.number}
                 </div>
-                <div className="text-sm text-transparent clip-text bg-clip-text bg-gradient-to-r from-gray-400 to-white">
+                <div className="text-sm text-muted-foreground">
                   {stat.label}
                 </div>
               </div>
@@ -82,7 +83,7 @@ export default function Index() {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:glow-primary "
+                className="border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:glow-primary"
               >
                 <CardContent className="p-6 space-y-4">
                   <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
@@ -114,6 +115,9 @@ export default function Index() {
           </Link>
         </div>
       </section>
+
+      {/* Footer Section */}
+      <Footer />
     </div>
   );
 }

@@ -17,7 +17,7 @@ function Button({ variant = "default", size = "default", className = "", ...prop
     ghost: "hover:bg-accent hover:text-accent-foreground",
     link: "text-blue-600 hover:underline underline-offset-4",
     hero: "bg-gradient-to-r from-blue-600 to-indigo-500 text-white hover:opacity-90 shadow-lg",
-    glass: "bg-white/10 border border-white/20 backdrop-blur-sm hover:bg-white/20 text-white",
+    glass: "bg-card/50 backdrop-blur-sm border border-border hover:bg-card/80",
   };
 
   // 📏 ขนาดของปุ่ม

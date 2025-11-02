@@ -12,6 +12,16 @@
 
   --color-accent: hsla(199 89% 48%);
   --color-accent-foreground: hsla(0 0% 100%);
+
+  --color-card: hsla(0 0% 100%);
+  --color-card-foreground: hsla(220 20% 10%);
+
+  --color-muted: hsla(214 32% 91%);
+  --color-muted-foreground: hsla(220 9% 46%);
+
+  /* 🌟glow effect */
+  --glow-primary: 0 8px 32px hsla(217 91% 60% / 0.35);
+
 }
 
 /* 🌙 Theme (Dark mode — activated by .dark class) */
@@ -26,6 +36,15 @@
 
   --color-accent: hsla(199 89% 48%);
   --color-accent-foreground: hsla(0 0% 100%);
+
+  --color-card: hsla(217 33% 17%);
+  --color-card-foreground: hsla(210 40% 98%);
+
+  --color-muted: hsla(217 33% 20%);
+  --color-muted-foreground: hsla(215 20% 65%);
+
+  /* ✨glow effect */
+  --glow-primary: 0 8px 32px hsla(217 91% 60% / 0.35);
 
 }
 
@@ -55,4 +74,12 @@ body {
 
 @utility bg-gradient-primary {
   background: var(--gradient-primary);
+}
+
+@utility glow-primary {
+  box-shadow: var(--glow-primary);
+}
+
+@utility border-primary {
+  border-color: var(--color-primary) !important;
 }
