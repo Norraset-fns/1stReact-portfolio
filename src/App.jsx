@@ -6,6 +6,7 @@ import HeroBanner from "./components/HeroBanner";
 
 import Index from "./pages/Index";
 import About from "./pages/About";
+import Portfolio from "./pages/Portfolio";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -17,7 +18,7 @@ function App() {
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/portfolio" element={<Portfolio />} />
             </Routes>
           </main>
         </div>

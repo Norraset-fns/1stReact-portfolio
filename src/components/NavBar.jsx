@@ -7,7 +7,7 @@ import { Button } from "./UI/button";
 const navLinks = [
   { id: 1, name: "หน้าหลัก", path: "/" },
   { id: 2, name: "เกี่ยวกับเรา", path: "/about" },
-  { id: 3, name: "บริการ", path: "/services" },
+  { id: 3, name: "ผลงาน", path: "/portfolio" },
   { id: 4, name: "ติดต่อ", path: "/contact" },
 ];
 function NavBar() {
