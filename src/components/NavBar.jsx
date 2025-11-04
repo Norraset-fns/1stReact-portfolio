@@ -8,7 +8,8 @@ const navLinks = [
   { id: 1, name: "หน้าหลัก", path: "/" },
   { id: 2, name: "เกี่ยวกับเรา", path: "/about" },
   { id: 3, name: "ผลงาน", path: "/portfolio" },
-  { id: 4, name: "ติดต่อ", path: "/contact" },
+  { id: 4, name: "บริการ", path: "/services" },
+  { id: 5, name: "ติดต่อ", path: "/contact" },
 ];
 function NavBar() {
   const [isDark, setIsDark] = useState(false);

@@ -7,6 +7,7 @@ import HeroBanner from "./components/HeroBanner";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
+import Services from "./pages/Services";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -19,6 +20,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
             </Routes>
           </main>
         </div>
