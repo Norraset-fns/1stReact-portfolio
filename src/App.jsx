@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Services from "./pages/Services";
+import Contact from "./pages/Contact";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -22,6 +23,7 @@ function App() {
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>
         </div>
