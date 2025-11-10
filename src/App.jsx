@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import HeroBanner from "./components/HeroBanner";
+import Footer from "./components/Footer";
+import { Toaster } from "./components/UI/toaster";
 
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -14,6 +16,7 @@ function App() {
 
   return (
     <>
+      <Toaster />
       <BrowserRouter>
         <div className="flex flex-col min-h-screen">
           <NavBar />
@@ -26,6 +29,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>
+          <Footer />
         </div>
       </BrowserRouter>
     </>

@@ -12,8 +12,10 @@ import { Input } from "../components/UI/input";
 import { Textarea } from "../components/UI/textarea";
 import { Button } from "../components/UI/button";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useToast } from "../hooks/use-toast";
 
 function Contact() {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",

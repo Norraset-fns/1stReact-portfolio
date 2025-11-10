@@ -105,3 +105,83 @@ body {
     transform: translateY(0);
   }
 }
+
+@keyframes slide-in-from-top {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-bottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out-to-right {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out-80 {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Toast เปิด - เล่นอนิเมชัน slide-in จากบน (บนหน้าจอใหญ่) */
+[data-state="open"] {
+  animation: slide-in-from-top 0.3s ease forwards;
+}
+
+/* Toast เปิด - เล่นอนิเมชัน slide-in จากล่าง (ถ้าอยากแยกขนาดจอ ต้องเขียน media query เพิ่ม) */
+@media (max-width: 640px) {
+  [data-state="open"] {
+    animation: slide-in-from-bottom 0.3s ease forwards;
+  }
+}
+
+/* Toast ปิด - เล่นอนิเมชัน slide-out ไปทางขวา */
+[data-state="closed"] {
+  animation: slide-out-to-right 0.2s ease forwards;
+}
+
+/* Toast ปิด - fade out แบบ 80% opacity */
+[data-state="closed"] {
+  animation: fade-out-80 0.2s ease forwards;
+}
+
+/* กรณี swipe gesture ปิด */
+[data-swipe="end"] {
+  animation: slide-out-to-right 0.2s ease forwards;
+}
+
+/* เคลื่อนที่ toast ตาม swipe */
+[data-swipe="move"] {
+  transition: none;
+  transform: translateX(var(--radix-toast-swipe-move-x));
+}
+
+[data-swipe="cancel"] {
+  transform: translateX(0);
+  transition: transform 200ms ease-out;
+}
