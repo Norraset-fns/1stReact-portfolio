@@ -30,12 +30,12 @@ function HeroBanner() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/">
+              <Link to="/portfolio">
                 <Button size="lg" variant="hero" className="text-lg px-8">
                   ดูผลงาน
                 </Button>
               </Link>
-              <Link to="/about">
+              <Link to="/contact">
                 <Button size="lg" variant="glass" className="text-lg px-8">
                   ติดต่อเรา
                 </Button>

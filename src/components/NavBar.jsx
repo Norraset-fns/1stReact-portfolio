@@ -86,18 +86,23 @@ function NavBar() {
             {/* Mobile Menu Button */}
             <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} >
               {isMenuOpen ? (
-                <X className="h-5 w-5" />
+                <X className="h-5 w-5 transition-transform duration-300 rotate-90" />
               ) : (
-                <Menu className="h-5 w-5" />
+                <Menu className="h-5 w-5 " />
               )}
             </Button>
           </div>
         </div>
         
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
-            <div className="flex flex-col space-y-4">
+       <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen
+              ? "max-h-96 opacity-100 border-t border-border"
+              : "max-h-0 opacity-0"
+          }`}
+        >
+            <div className="flex flex-col space-y-4 py-3">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
@@ -112,7 +117,7 @@ function NavBar() {
               ))}
             </div>
           </div>
-        )}
+        
       </div>
     </nav>
   );

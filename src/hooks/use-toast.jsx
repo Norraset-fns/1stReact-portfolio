@@ -1,7 +1,7 @@
 import * as React from "react";
 
 const TOAST_LIMIT = 1;
-const TOAST_REMOVE_DELAY = 1000000; // 1000 วิ หรือ 16 นาทีครึ่ง (ตัวอย่างตั้งไว้เยอะ)
+const TOAST_REMOVE_DELAY = 5000; // 1000 วิ หรือ 16 นาทีครึ่ง (ตัวอย่างตั้งไว้เยอะ)
 
 let count = 0;
 
