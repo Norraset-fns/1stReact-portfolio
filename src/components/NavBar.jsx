@@ -55,9 +55,9 @@ function NavBar() {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center glow-primary">
-              <span className="text-white font-bold text-xl">T</span>
+              <span className="text-white font-bold text-xl">K</span>
             </div>
-            <span className="text-xl font-bold text-gradient">TechTeam</span>
+            <span className="text-xl font-bold text-gradient">KindeeYudee</span>
           </Link>
 
           {/* desktop menu */}
