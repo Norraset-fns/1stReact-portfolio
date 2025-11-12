@@ -9,9 +9,15 @@ import {
   Palette,
   Rocket,
   Check,
+  Code,
 } from "lucide-react";
-import {Card,CardContent,CardDescription,CardHeader,CardTitle,} from "../components/UI/card";
-
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../components/UI/card";
 
 function Services() {
   const services = [
@@ -41,14 +47,14 @@ function Services() {
       color: "from-purple-500 to-pink-500",
     },
     {
-      icon: Smartphone,
-      title: "Mobile Application",
-      description: "แอปมือถือ iOS และ Android ด้วย React Native",
+      icon: Code,
+      title: "Front-End Development",
+      description: "พัฒนาเว็บด้วยเทคโนโลยีสมัยใหม่ เช่น React และ Tailwind CSS",
       features: [
-        "Cross-platform",
-        "Native Performance",
-        "Push Notifications",
-        "Offline Support",
+        "Responsive Design",
+        "Interactive UI",
+        "Reusable Components",
+        "Optimized Performance",
       ],
       color: "from-green-500 to-emerald-500",
     },
@@ -107,7 +113,7 @@ function Services() {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {services.map((service, index) => (
+          {services.map((service, index) => (
             <Card
               key={service.title}
               className="p-8 space-y-6 border-border hover:border-primary transition-all duration-300 hover:glow-primary group"
@@ -149,10 +155,22 @@ function Services() {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
-              { step: "01", title: "ปรึกษา & วางแผน", desc: "รับฟังความต้องการและวางแผนโปรเจค" },
-              { step: "02", title: "ออกแบบ", desc: "สร้าง UI/UX และ Prototype" },
+              {
+                step: "01",
+                title: "ปรึกษา & วางแผน",
+                desc: "รับฟังความต้องการและวางแผนโปรเจค",
+              },
+              {
+                step: "02",
+                title: "ออกแบบ",
+                desc: "สร้าง UI/UX และ Prototype",
+              },
               { step: "03", title: "พัฒนา", desc: "เขียนโค้ดและทดสอบระบบ" },
-              { step: "04", title: "ส่งมอบ & ดูแล", desc: "Deploy และให้การสนับสนุน" }
+              {
+                step: "04",
+                title: "ส่งมอบ & ดูแล",
+                desc: "Deploy และให้การสนับสนุน",
+              },
             ].map((item, index) => (
               <Card
                 key={item.step}
@@ -179,10 +197,14 @@ function Services() {
               พร้อมเริ่มโปรเจคกับเราแล้วหรือยัง?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              ปรึกษาฟรี! เรามีทีมงานพร้อมตอบทุกคำถามและให้คำแนะนำที่เหมาะสมกับธุรกิจคุณ
+              ปรึกษาฟรี!
+              เรามีทีมงานพร้อมตอบทุกคำถามและให้คำแนะนำที่เหมาะสมกับธุรกิจคุณ
             </p>
             <Link to="/contact">
-              <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/50">
+              <Button
+                size="lg"
+                className="gap-2 bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/50"
+              >
                 ติดต่อเราเลย
               </Button>
             </Link>

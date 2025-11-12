@@ -72,7 +72,7 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              ทำไมต้องเลือก <span className="text-gradient">TechTeam</span>
+              ทำไมต้องเลือก <span className="text-gradient">KindeeYudee</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               เราพร้อมมอบบริการที่ดีที่สุดเพื่อความสำเร็จของคุณ

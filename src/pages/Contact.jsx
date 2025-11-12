@@ -57,8 +57,8 @@ function Contact() {
     {
       icon: Mail,
       title: "Email",
-      value: "contact@techteam.com",
-      link: "mailto:contact@techteam.com",
+      value: "norrasart@kindeeyudee.com",
+      link: "mailto:norrasart@kindeeyudee.com",
     },
     {
       icon: Phone,
@@ -69,7 +69,7 @@ function Contact() {
     {
       icon: MapPin,
       title: "Location",
-      value: "Bangkok, Thailand",
+      value: "Thailand",
       link: null,
     },
   ];
